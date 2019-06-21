@@ -14,7 +14,7 @@ window.onload = () => {
   const carousel2 = jungle.createCarousel({
     elClassNameObj: { container: ".container2", slider: ".card-slider2" },
     options: {
-      duration: 100,
+      duration: 1000,
       animation: "ease-in",
       infinite: false
     }

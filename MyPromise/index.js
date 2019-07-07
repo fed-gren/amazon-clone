@@ -1,12 +1,10 @@
-const state = require("./constants/PromiseState");
-const type = require("./constants/TypesString");
-const errMsg = require("./constants/ErrorMessages");
+import state from "./constants/promiseState.js";
+import type from "./constants/typesString.js";
+import errMsg from "./constants/errorMessages.js";
 
 class MyPromise {
   constructor(action) {
-    if(typeof action === type.FUNCTION) {
-      throw new TypeError(errMsg.RESOLVER_TYPE);
-    }
+    if(typeof action !== type.FUNCTION) throw new TypeError(errMsg.RESOLVER_TYPE);
 
     this.state = state.PENDING;
     this.value = undefined;
@@ -83,18 +81,4 @@ class MyPromise {
   }
 }
 
-let myFirstPromise = new MyPromise((resolve, reject) => {
-  setTimeout(() => {
-    resolve({ name: "Success!", id: 123123 });
-  }, 1000);
-});
-
-myFirstPromise
-  .then(successMessage => {
-    return successMessage.name;
-  })
-  .then(data => {
-    console.log(`data is ${data}`);
-  });
-
-module.exports = MyPromise;
+export default MyPromise;

@@ -37,8 +37,7 @@ export default class CarouselController {
   }
 
   createCarousel() {
-    fetch(FETCH_PATH)
-      .then(data => data.json())
+    MyFetch(FETCH_PATH)
       .then(data => {
         this.loadCarsouelCss();
         return data;

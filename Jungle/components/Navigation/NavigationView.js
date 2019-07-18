@@ -2,7 +2,7 @@ import MyFetch from "../../../Grenutil/MyFetch/index.js";
 import MyEventEmitter from "../../../Grenutil/MyEventEmitter/index.js";
 import delegate from "../../../Grenutil/delegate.js";
 
-const FETCH_PATH = "https://fed-gren.github.io/amazone-clone/data/localData.json";
+const FETCH_PATH = "https://fed-gren.github.io/amazon-clone/data/localData.json";
 const CSS_PATH = "Jungle/components/Navigation/Navigation.css";
 
 const NAV_ITEMS_COLORS = ["#2591c0", "#a90067", "#008577", "#e65d18"];

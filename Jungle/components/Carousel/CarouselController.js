@@ -1,6 +1,7 @@
 import MyFetch from "../../../Grenutil/MyFetch/index.js";
 
-const FETCH_PATH = "https://fed-gren.github.io/amazon-clone/data/localData.json";
+const FETCH_PATH =
+  "https://fed-gren.github.io/amazon-clone/data/localData.json";
 const CSS_PATH = "Jungle/components/Carousel/Carousel.css";
 
 export default class CarouselController {
@@ -36,12 +37,9 @@ export default class CarouselController {
     head.appendChild(link);
   }
 
-  createCarousel() {
-    MyFetch(FETCH_PATH)
-      .then(data => {
-        this.loadCarsouelCss();
-        return data;
-      })
-      .then(data => this.view.initRender(data));
+  async createCarousel() {
+    const data = await MyFetch(FETCH_PATH);
+    this.loadCarsouelCss();
+    this.view.initRender(data);
   }
 }

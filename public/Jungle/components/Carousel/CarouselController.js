@@ -1,7 +1,8 @@
 import MyFetch from "../../../Grenutil/MyFetch/index.js";
 
-const FETCH_PATH =
-  "https://fed-gren.github.io/amazon-clone/data/localData.json";
+const FETCH_PATH = "http://localhost:8080/data/localData.json";
+// "https://fed-gren.github.io/amazon-clone/data/localData.json";
+
 const CSS_PATH = "Jungle/components/Carousel/Carousel.css";
 
 export default class CarouselController {

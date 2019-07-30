@@ -1,7 +1,7 @@
 import MyFetch from "../../../Grenutil/MyFetch/index.js";
 import MyEventEmitter from "../../../Grenutil/MyEventEmitter/index.js";
 import delegate from "../../../Grenutil/delegate.js";
-const FETCH_PATH = "http://localhost:8080/data/localData.json";
+const FETCH_PATH = "https://gren-amazon.herokuapp.com/data/localData.json";
 import templates from "../../templates.js";
 
 const CSS_PATH = "Jungle/components/Navigation/Navigation.css";

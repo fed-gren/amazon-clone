@@ -47,7 +47,7 @@ export default class AutoListView extends SearchInfoView {
 
     try {
       suggestionData = (await MyFetch(
-        `${config.localApiUrl}?text=${text}`
+        `${config.deployUrl}/api?text=${text}`
       )).filter(v => v.prefix === text)[0].suggestions;
       suggestionData = this.getSortedData({ suggestionData, text });
     } catch (error) {

@@ -1,8 +1,5 @@
 import MyFetch from "../../../Grenutil/MyFetch/index.js";
-
-const FETCH_PATH = "https://gren-amazon.herokuapp.com/data/localData.json";
-
-const CSS_PATH = "Jungle/components/Carousel/Carousel.css";
+import config from "./config.js";
 
 export default class CarouselController {
   constructor({ view, nav }) {
@@ -32,13 +29,13 @@ export default class CarouselController {
 
     link.rel = "stylesheet";
     link.type = "text/css";
-    link.href = CSS_PATH;
+    link.href = config.cssPath;
 
     head.appendChild(link);
   }
 
   async createCarousel() {
-    const data = await MyFetch(FETCH_PATH);
+    const data = await MyFetch(config.fecthPath);
     this.loadCarsouelCss();
     this.view.initRender(data);
   }

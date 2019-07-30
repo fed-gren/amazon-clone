@@ -1,8 +1,8 @@
 import MyFetch from "../../../Grenutil/MyFetch/index.js";
 import MyEventEmitter from "../../../Grenutil/MyEventEmitter/index.js";
 import delegate from "../../../Grenutil/delegate.js";
-const FETCH_PATH = "https://gren-amazon.herokuapp.com/data/localData.json";
 import templates from "../../templates.js";
+import config from "./config.js";
 
 const CSS_PATH = "Jungle/components/Navigation/Navigation.css";
 const NAV_ITEMS_COLORS = ["#2591c0", "#a90067", "#008577", "#e65d18"];
@@ -87,7 +87,7 @@ export default class NavigationView extends MyEventEmitter {
   }
 
   async init() {
-    this.render(await MyFetch(FETCH_PATH));
+    this.render(await MyFetch(config.fetchPath));
   }
 
   setNextItem() {

@@ -35,7 +35,7 @@ export default class CarouselController {
   }
 
   async createCarousel() {
-    const data = await MyFetch(config.fecthPath);
+    const data = await MyFetch(config.fetchUrl);
     this.loadCarsouelCss();
     this.view.initRender(data);
   }
